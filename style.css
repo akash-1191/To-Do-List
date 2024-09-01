@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    /* background: linear-gradient(to right, #c94b4b, #4b134f); */
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.todo {
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+
+}
+
+.todo h1 {
+    text-align: center;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.textbox1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 2px;
+    width: 88%;
+    margin-left: 10px;
+}
+
+.textbox1 input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    font-size: 18px;
+    color: white;
+    border-radius: 15px;
+
+}
+
+.textbox1 button {
+    background-color: rgba(235, 53, 168, 0.881);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    flex-shrink: 0;
+}
+
+.list {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 350px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 18px;
+    padding: 10px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding-left: 40px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url('image/checkboxnew.png');
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+ul li.checked {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url('image/checkboxfill.png');
+}
+
+
+ul li span {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: rgba(90, 89, 89, 0.97);
+    cursor: pointer;
+
+}
+
+ul li span:hover {
+    color: red;
+}
+
+.counter p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+} 
+
+
+
+@media (max-width: 600px) {
+    .todo {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .textbox1 input {
+        font-size: 16px;
+    }
+
+    .textbox1 button {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    ul li {
+        font-size: 16px;
+        padding: 8px;
+        padding-left: 35px;
+    }
+
+    ul li span {
+        font-size: 18px;
+    }
+}
